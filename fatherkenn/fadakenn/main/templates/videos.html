@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Videos - Mercirick</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/videos.css' %}">
+    
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">Mercirick</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{% url "home" %}"><div class="nav-link-wrapper">Home</div></a></li>
+                <li><a href="{% url "about" %}"><div class="nav-link-wrapper">About</div></a></li>
+                
+                <li><a href="{% url "blog" %}"><div class="nav-link-wrapper">Blog</div></a></li>
+                <li><a href="{% url "videos" %}"><div class="nav-link-wrapper">Videos</div></a></li>
+                <li><a href="{% url "gallery" %}"><div class="nav-link-wrapper">Gallery</div></a></li>
+                
+                <li><a href="{% url "contact" %}"><div class="nav-link-wrapper">Contact</div></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Video Section -->
+    <section class="video-section">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Videos & Podcasts</h1>
+                <p class="page-subtitle">Exploring creativity, mental health, and the intersection where art meets wellness through engaging visual content and conversations</p>
+            </div>
+
+            <!-- Video Categories -->
+            <div class="video-categories">
+                <button class="category-btn active" data-category="all">All Videos</button>
+                <button class="category-btn" data-category="talks">Talks</button>
+                <button class="category-btn" data-category="workshops">Workshops</button>
+                <button class="category-btn" data-category="tutorials">Tutorials</button>
+                <button class="category-btn" data-category="interviews">Interviews</button>
+            </div>
+
+            <!-- Featured Video -->
+            <div class="featured-video">
+                <span class="featured-label">Featured</span>
+                <div class="featured-container">
+                    <iframe src="https://www.youtube.com/embed/dQw4w9WgXcQ" title="Featured Video" allowfullscreen></iframe>
+                </div>
+                <div class="featured-info">
+                    <h2 class="featured-title">The Healing Power of Creative Expression</h2>
+                    <p class="featured-description">In this powerful TED-style talk, I explore how art and creativity can serve as transformative tools for mental health recovery and self-discovery.</p>
+                    <div class="featured-meta">
+                        <div class="meta-item">
+                            <i class="far fa-eye"></i>
+                            <span>125K views</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-clock"></i>
+                            <span>18 min</span>
+                        </div>
+                        <div class="meta-item">
+                            <i class="far fa-calendar"></i>
+                            <span>2 weeks ago</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Video Grid -->
+            <div class="video-grid" id="videoGrid">
+                <!-- Videos will be dynamically loaded here -->
+            </div>
+
+            <!-- Load More -->
+            <div class="load-more">
+                <button class="load-more-btn" id="loadMoreBtn">Load More Videos</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Podcast Section -->
+    <section class="podcast-section">
+        <div class="container">
+            <div class="podcast-header">
+                <h2 class="podcast-title">Creative Minds Podcast</h2>
+                <p class="podcast-subtitle">Conversations with artists, therapists, and innovators exploring the intersection of creativity and mental wellness</p>
+            </div>
+
+            <div class="podcast-grid" id="podcastGrid">
+                <!-- Podcasts will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Subscribe Section -->
+    <section class="subscribe-section">
+        <div class="container">
+            <div class="subscribe-content">
+                <h2 class="subscribe-title">Stay Inspired</h2>
+                <p class="subscribe-description">Subscribe to my YouTube channel and podcast for weekly content on creativity, mental wellness, and personal growth.</p>
+                <form class="subscribe-form" id="subscribeForm">
+                    <input type="email" class="subscribe-input" placeholder="Enter your email" required>
+                    <button type="submit" class="subscribe-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Video Modal -->
+    <div class="video-modal" id="videoModal">
+        <div class="modal-content">
+            <span class="modal-close" id="modalClose">&times;</span>
+            <div class="modal-video">
+                <iframe id="modalVideoFrame" src="" title="Video Player" allowfullscreen></iframe>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2023 Mercirick. All Rights Reserved. Designed with Purpose</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/videos.js' %}"></script>
+
+    
+</body>
+</html>

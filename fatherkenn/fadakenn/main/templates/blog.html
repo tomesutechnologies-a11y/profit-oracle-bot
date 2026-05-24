@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blog - Mercirick</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/blog.css' %}">
+    
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">Mercirick</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{% url "home" %}"><div class="nav-link-wrapper">Home</div></a></li>
+                <li><a href="{% url "about" %}"><div class="nav-link-wrapper">About</div></a></li>
+                
+                <li><a href="{% url "blog" %}"><div class="nav-link-wrapper">Blog</div></a></li>
+                <li><a href="{% url "videos" %}"><div class="nav-link-wrapper">Videos</div></a></li>
+                <li><a href="{% url "gallery" %}"><div class="nav-link-wrapper">Gallery</div></a></li>
+                
+                <li><a href="{% url "contact" %}"><div class="nav-link-wrapper">Contact</div></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Blog Section -->
+    <section class="blog">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Blog</h1>
+                <p class="page-subtitle">Exploring the intersection of creativity and mental wellness through stories, insights, and reflections</p>
+            </div>
+
+            <div class="blog-filters">
+                <button class="filter-btn active" data-filter="all">All Posts</button>
+                <button class="filter-btn" data-filter="creativity">Creativity</button>
+                <button class="filter-btn" data-filter="mental-health">Mental Health</button>
+                <button class="filter-btn" data-filter="design">Design</button>
+                <button class="filter-btn" data-filter="personal">Personal</button>
+            </div>
+
+            <div class="blog-grid" id="blogGrid">
+                <!-- Blog posts will be dynamically loaded here -->
+            </div>
+
+            <div class="pagination" id="pagination">
+                <!-- Pagination will be dynamically loaded here -->
+            </div>
+        </div>
+    </section>
+
+    <!-- Newsletter Section -->
+    <section class="newsletter">
+        <div class="container">
+            <div class="newsletter-content">
+                <h2 class="newsletter-title">Stay Inspired</h2>
+                <p class="newsletter-description">Subscribe to my newsletter for weekly insights on creativity, mental wellness, and personal growth.</p>
+                <form class="newsletter-form" id="newsletterForm">
+                    <input type="email" class="newsletter-input" placeholder="Enter your email" required>
+                    <button type="submit" class="newsletter-btn">Subscribe</button>
+                </form>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2023 Mercirick. All Rights Reserved. Designed with Purpose</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/blog.js' %}"></script>
+</body>
+</html>

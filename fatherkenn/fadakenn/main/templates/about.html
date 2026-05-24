@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About - Mercirick</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/about.css' %}">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">Mercirick</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{% url "home" %}"><div class="nav-link-wrapper">Home</div></a></li>
+                <li><a href="{% url "about" %}"><div class="nav-link-wrapper">About</div></a></li>
+                
+                <li><a href="{% url "blog" %}"><div class="nav-link-wrapper">Blog</div></a></li>
+                <li><a href="{% url "videos" %}"><div class="nav-link-wrapper">Videos</div></a></li>
+                <li><a href="{% url "gallery" %}"><div class="nav-link-wrapper">Gallery</div></a></li>
+                
+                <li><a href="{% url "contact" %}"><div class="nav-link-wrapper">Contact</div></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- About Hero -->
+    <section class="about-hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <p class="hero-subtitle">Nice to meet you</p>
+                    <h1 class="hero-title">I'm Mercirick</h1>
+                    <p class="hero-description">MerciRick is a multifaceted professional dedicated to mental health advocacy, visual media consultancy, and creative writing and speaking. Her diverse skill set and unwavering commitment have established her as a prominent figure in these fields.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn btn-primary">Let's Work Together</a>
+                        <a href="#portfolio" class="btn btn-secondary">View My Work</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="https://picsum.photos/seed/mercirick/600/600.jpg" alt="Mercirick">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dual Roles Section -->
+    <section class="dual-roles">
+        <div class="container">
+            <h2 class="section-title">My Dual Passions</h2>
+            <div class="roles-grid">
+                <div class="role-card">
+                    <div class="role-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3 class="role-title">Creative Director</h3>
+                    <p class="role-description">Transforming visions into compelling visual narratives that resonate with audiences and drive meaningful engagement.</p>
+                    <ul class="role-features">
+                        <li><i class="fas fa-check"></i> Brand Identity & Strategy</li>
+                        <li><i class="fas fa-check"></i> Digital Experience Design</li>
+                        <li><i class="fas fa-check"></i> Creative Campaign Direction</li>
+                        <li><i class="fas fa-check"></i> UI/UX Design</li>
+                    </ul>
+                </div>
+                <div class="role-card">
+                    <div class="role-icon">
+                        <i class="fas fa-heart"></i>
+                    </div>
+                    <h3 class="role-title">Mental Health Advocate</h3>
+                    <p class="role-description">Creating safe spaces for mental health conversations through creative expression and community building.</p>
+                    <ul class="role-features">
+                        <li><i class="fas fa-check"></i> Mental Health Workshops</li>
+                        <li><i class="fas fa-check"></i> Art Therapy Sessions</li>
+                        <li><i class="fas fa-check"></i> Awareness Campaigns</li>
+                        <li><i class="fas fa-check"></i> Public Speaking</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Journey Section -->
+    <section class="journey">
+        <div class="container">
+            <h2 class="section-title">My Awards & Recognition</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Ambassador, Street Project Foundation (SPF)</h3>
+                        <p class="timeline-description">Recognized for her role in empowering youth through creative arts and social initiatives.</p>
+                    </div>
+                    {% comment %} <div class="timeline-year">2018</div> {% endcomment %}
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Alumni, Young Innovation Leaders (YIL)</h3>
+                        <p class="timeline-description"> Completed a fellowship designed to cultivate innovation and leadership among young professionals.</p>
+                    </div>
+                    {% comment %} <div class="timeline-year">2015</div> {% endcomment %}
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Moxie TV - Female Entrepreneur of the Year</h3>
+                        <p class="timeline-description">Honored for her entrepreneurial spirit and contributions to the creative industry.</p>
+                    </div>
+                    {% comment %} <div class="timeline-year">2018</div> {% endcomment %}
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Distinguished Panelist (Mental Health), Basketball Experience 2024</h3>
+                        <p class="timeline-description">Shared expertise on mental health topics, contributing to broader awareness and understanding..</p>
+                    </div>
+                    {% comment %} <div class="timeline-year">2020</div> {% endcomment %}
+                </div>
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <h3 class="timeline-title">Semi-Finalist, WeNaija Photo Contest 2023:</h3>
+                        <p class="timeline-description">Recognized for her exceptional photography skills in a national competition.</p>
+                    </div>
+                    {% comment %} <div class="timeline-year">2023</div> {% endcomment %}
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section class="skills">
+        <div class="container">
+            <h2 class="section-title">Skills & Expertise</h2>
+            <div class="skills-grid">
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-paint-brush"></i>
+                        Creative Skills
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <span class="skill-name">Brand Strategy</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">UI/UX Design</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Art Direction</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Digital Design</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-brain"></i>
+                        Mental Health
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <span class="skill-name">Art Therapy</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Workshop Facilitation</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Public Speaking</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Crisis Intervention</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+                <div class="skill-category">
+                    <h3 class="skill-category-title">
+                        <i class="fas fa-tools"></i>
+                        Technical Skills
+                    </h3>
+                    <ul class="skill-list">
+                        <li class="skill-item">
+                            <span class="skill-name">Adobe Creative Suite</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Figma</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">Web Development</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                        <li class="skill-item">
+                            <span class="skill-name">3D Design</span>
+                            <div class="skill-level">
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot filled"></span>
+                                <span class="skill-dot"></span>
+                                <span class="skill-dot"></span>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Philosophy Section -->
+    <section class="philosophy">
+        <div class="container">
+            <div class="philosophy-content">
+                <h2 class="section-title">My Philosophy</h2>
+                <p class="philosophy-quote">
+                    Creativity is not just about making beautiful things; it's about creating spaces where healing can happen, where voices can be heard, and where transformation becomes possible.
+                </p>
+                <p class="philosophy-text">
+                    I believe that art and design have the power to transcend boundaries and connect us on a deeper emotional level. When we combine creative expression with mental health awareness, we create opportunities for genuine human connection and collective healing.
+                </p>
+                <p class="philosophy-text">
+                    My approach is rooted in empathy, authenticity, and the belief that everyone has a creative voice worth hearing. Whether I'm designing a brand identity or facilitating a mental health workshop, my goal is always to create experiences that resonate, inspire, and empower.
+                </p>
+                <div class="philosophy-values">
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="value-title">Empathy</h3>
+                        <p class="value-description">Understanding and connecting with others on a human level</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-lightbulb"></i>
+                        </div>
+                        <h3 class="value-title">Creativity</h3>
+                        <p class="value-description">Finding innovative solutions to complex challenges</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <h3 class="value-title">Safety</h3>
+                        <p class="value-description">Creating spaces where vulnerability is celebrated</p>
+                    </div>
+                    <div class="value-item">
+                        <div class="value-icon">
+                            <i class="fas fa-rocket"></i>
+                        </div>
+                        <h3 class="value-title">Impact</h3>
+                        <p class="value-description">Making meaningful difference in people's lives</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Fun Facts Section -->
+    <section class="fun-facts">
+        <div class="container">
+            <h2 class="section-title">Fun Facts About Me</h2>
+            <div class="facts-grid">
+                <div class="fact-card">
+                    <div class="fact-number">15+</div>
+                    <p class="fact-text">Countries visited for creative inspiration and mental health conferences</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">500+</div>
+                    <p class="fact-text">Cups of coffee consumed while brainstorming creative ideas</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">3</div>
+                    <p class="fact-text">Rescue cats who serve as my creative assistants and emotional support</p>
+                </div>
+                <div class="fact-card">
+                    <div class="fact-number">∞</div>
+                    <p class="fact-text">Hours spent perfecting the balance between creativity and wellness</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <h2 class="cta-title">Ready to Create Something Meaningful?</h2>
+            <p class="cta-description">Whether you're looking for creative direction, mental health advocacy collaboration, or just want to connect over coffee, I'd love to hear from you.</p>
+            <div class="cta-buttons">
+                <a href="contact.html" class="btn btn-light">Start a Project</a>
+                <a href="gallery.html" class="btn btn-outline">View My Work</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2023 Mercirick. All Rights Reserved. Designed with Purpose</p>
+        </div>
+    </footer>
+    
+     <script src="{% static 'js/about.js' %}"></script>
+    
+</body>
+</html>

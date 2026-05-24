@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gallery - Mercirick</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/gallery.css' %}">
+
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="index.html" class="logo">Mercirick</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{% url "home" %}"><div class="nav-link-wrapper">Home</div></a></li>
+                <li><a href="{% url "about" %}"><div class="nav-link-wrapper">About</div></a></li>
+                
+                <li><a href="{% url "blog" %}"><div class="nav-link-wrapper">Blog</div></a></li>
+                <li><a href="{% url "videos" %}"><div class="nav-link-wrapper">Videos</div></a></li>
+                <li><a href="{% url "gallery" %}"><div class="nav-link-wrapper">Gallery</div></a></li>
+                
+                <li><a href="{% url "contact" %}"><div class="nav-link-wrapper">Contact</div></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Gallery Section -->
+    <section class="gallery">
+        <div class="container">
+            <div class="page-header">
+                <h1 class="page-title">Gallery</h1>
+                <p class="page-subtitle">A visual journey through my creative projects and mental health advocacy work</p>
+            </div>
+
+            <div class="gallery-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+                <button class="filter-btn" data-filter="photography">Photography</button>
+                <button class="filter-btn" data-filter="mental-health">Mental Health</button>
+            </div>
+
+            <div class="gallery-grid" id="galleryGrid">
+                <!-- Gallery items will be dynamically loaded here -->
+            </div>
+
+            <div class="load-more">
+                <button class="load-more-btn" id="loadMoreBtn">Load More</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox">
+        <div class="lightbox-content">
+            <span class="lightbox-close" id="lightboxClose">&times;</span>
+            <button class="lightbox-nav lightbox-prev" id="lightboxPrev">&#10094;</button>
+            <button class="lightbox-nav lightbox-next" id="lightboxNext">&#10095;</button>
+            <img src="" alt="" class="lightbox-img" id="lightboxImg">
+            <div class="lightbox-info">
+                <h3 class="lightbox-title" id="lightboxTitle"></h3>
+                <p class="lightbox-category" id="lightboxCategory"></p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2023 Mercirick. All Rights Reserved. Designed with Purpose</p>
+        </div>
+    </footer>
+    <script src="{% static 'js/gallery.js' %}"></script>
+    
+</body>
+</html>

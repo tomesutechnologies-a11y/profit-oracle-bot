@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mercirick - Creative Director & Mental Health Advocate</title>
+    {% load static %}
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700;900&family=Space+Grotesk:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
+</head>
+<body>
+    <!-- Custom Cursor -->
+    <div class="cursor"></div>
+    <div class="cursor-follower"></div> 
+
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-text">
+            <span>M</span><span>E</span><span>R</span><span>C</span><span>I</span><span>R</span><span>I</span><span>C</span><span>K</span>
+        </div>
+    </div>
+
+    <!-- Header -->
+    <header id="header">
+        <nav>
+            <a href="#" class="logo">Mercirick</a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="{% url "home" %}"><div class="nav-link-wrapper">Home</div></a></li>
+                <li><a href="{% url "about" %}"><div class="nav-link-wrapper">About</div></a></li>
+                
+                <li><a href="{% url "blog" %}"><div class="nav-link-wrapper">Blog</div></a></li>
+                <li><a href="{% url "videos" %}"><div class="nav-link-wrapper">Videos</div></a></li>
+                <li><a href="{% url "gallery" %}"><div class="nav-link-wrapper">Gallery</div></a></li>
+                
+                <li><a href="{% url "contact" %}"><div class="nav-link-wrapper">Contact</div></a></li>
+            </ul>
+            <div class="menu-toggle" id="menuToggle">
+                <span></span>
+                <span></span>
+                <span></span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="hero-content">
+            <h1 class="hero-title">
+                <span style="animation-delay: 0.1s">C</span><span style="animation-delay: 0.2s">R</span><span style="animation-delay: 0.3s">E</span><span style="animation-delay: 0.4s">A</span><span style="animation-delay: 0.5s">T</span><span style="animation-delay: 0.6s">I</span><span style="animation-delay: 0.7s">V</span><span style="animation-delay: 0.8s">E</span><span style="animation-delay: 0.9s">&nbsp;</span><span style="animation-delay: 1s">D</span><span style="animation-delay: 1.1s">I</span><span style="animation-delay: 1.2s">R</span><span style="animation-delay: 1.3s">E</span><span style="animation-delay: 1.4s">C</span><span style="animation-delay: 1.5s">T</span><span style="animation-delay: 1.6s">O</span><span style="animation-delay: 1.7s">R</span>
+            </h1>
+            <p class="hero-subtitle">Welcome to MerciRick.com , the digital home of MerciRick—a dynamic blogger, accomplished writer, engaging podcaster, and savvy social media marketer. Dive into a world where creativity meets strategy, and stories come alive.</p>
+            <div class="hero-buttons">
+                <a href="{% url "gallery" %}" class="btn btn-primary">View My Work</a>
+                <a href="{% url "videos" %}" class="btn btn-secondary">Learn More</a>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="scroll-text">Scroll</div>
+            <div class="scroll-line"></div>
+        </div>
+        <div class="image-reveal">
+            <img src="https://picsum.photos/seed/mercirick/800/1000.jpg" alt="Mercirick">
+            <div class="image-overlay"></div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="about" id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="dual-roles">
+                <div class="role-card">
+                    <div class="role-content">
+                        <div class="role-icon">
+                            <i class="fas fa-palette"></i>
+                        </div>
+                        <h3 class="role-title">Mental Health Advocacy As the convener of Mind and Space</h3>
+                        <p class="role-description">A virtual mental health community, MerciRick provides a safe haven for individuals to share experiences and find solace. Through platforms like WhatsApp and Instagram, the community engages in activities ranging from open discussions on wellness to interactive games designed to alleviate stress. Since its inception in 2021, Mind and Space has spearheaded annual campaigns such as "Help Fight Depression," "30-Day Wellness Challenge," and "Understanding Anxiety." In 2025, the initiative is set to expand into schools, introducing reflection sessions aimed at helping students and educators manage stress while pursuing their passions.</p>
+                    </div>
+                </div>
+                <div class="role-card">
+                    <div class="role-content">
+                        <div class="role-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="role-title">Visual Media Consultancy and Creation</h3>
+                        <p class="role-description">In the realm of visual media, MerciRick combines her passion for photography with entrepreneurial acumen. She offers consultancy services and conducts free periodic classes for young girls and youths, positioning photography as both a stress relief mechanism and a viable career path. Her portfolio spans documentaries, nature photography, and portraiture, capturing the essence of diverse subjects.</p>
+                    </div>
+                </div>
+                {% comment %} <div class="role-card">
+                    <div class="role-content">
+                        <div class="role-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="role-title">Creative Writing and Speaking</h3>
+                        <p class="role-description">A gifted writer and speaker, MerciRick channels her creativity into various platforms, inspiring and educating her audience. Her work encompasses blogging, podcasting, and public speaking engagements, where she shares insights on mental health, personal development, and the arts.</p>
+                    </div>
+                </div> {% endcomment %}
+            </div>
+
+            <div class="dual-roles">
+                <div class="role-card">
+                    <div class="role-content">
+                        <div class="role-icon">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                        <h3 class="role-title">Creative Writing and Speaking</h3>
+                        <p class="role-description">A gifted writer and speaker, MerciRick channels her creativity into various platforms, inspiring and educating her audience. Her work encompasses blogging, podcasting, and public speaking engagements, where she shares insights on mental health, personal development, and the arts.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Portfolio Section -->
+    <section class="portfolio" id="portfolio">
+        <div class="container">
+            <h2 class="section-title">Creative Portfolio</h2>
+            <div class="portfolio-filters">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="branding">Branding</button>
+                <button class="filter-btn" data-filter="digital">Digital</button>
+                <button class="filter-btn" data-filter="campaigns">Campaigns</button>
+                <button class="filter-btn" data-filter="mental-health">Mental Health</button>
+            </div>
+            <div class="portfolio-grid">
+                <div class="portfolio-item" data-category="branding">
+                    <img src="https://picsum.photos/seed/brand1/600/400.jpg" alt="Branding Project" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Brand Identity Revitalization</h3>
+                        <p class="portfolio-category">Branding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="digital">
+                    <img src="https://picsum.photos/seed/digital1/600/400.jpg" alt="Digital Experience" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Interactive Digital Experience</h3>
+                        <p class="portfolio-category">Digital</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="campaigns">
+                    <img src="https://picsum.photos/seed/campaign1/600/400.jpg" alt="Awareness Campaign" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Social Impact Campaign</h3>
+                        <p class="portfolio-category">Campaigns</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="mental-health">
+                    <img src="https://picsum.photos/seed/mental1/600/400.jpg" alt="Mental Health Initiative" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Mental Health Awareness Initiative</h3>
+                        <p class="portfolio-category">Mental Health</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="branding">
+                    <img src="https://picsum.photos/seed/brand2/600/400.jpg" alt="Brand Strategy" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Strategic Brand Development</h3>
+                        <p class="portfolio-category">Branding</p>
+                    </div>
+                </div>
+                <div class="portfolio-item" data-category="digital">
+                    <img src="https://picsum.photos/seed/digital2/600/400.jpg" alt="Web Design" class="portfolio-img">
+                    <div class="portfolio-overlay">
+                        <h3 class="portfolio-title">Responsive Web Design</h3>
+                        <p class="portfolio-category">Digital</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Mental Health Section -->
+    <section class="mental-health" id="mental-health">
+        <div class="container">
+            <h2 class="section-title">Mental Health Advocacy</h2>
+            <div class="mental-health-content">
+                <div class="mental-health-text">
+                    <h3 class="mental-health-heading">Creating Spaces for Healing</h3>
+                    <p class="mental-health-description">My journey in mental health advocacy began with my own experiences navigating anxiety and depression. Through creative expression and community building, I've found powerful ways to transform personal struggles into collective healing.</p>
+                    <p class="mental-health-description">I believe that creativity and mental wellness are deeply interconnected. Art, design, and storytelling can serve as therapeutic tools, helping individuals process emotions and find their voice. My work focuses on creating accessible resources and safe spaces where people can explore their mental health without judgment.</p>
+                </div>
+                <div class="mental-health-image">
+                    <img src="https://picsum.photos/seed/mentalhealth/600/800.jpg" alt="Mental Health Advocacy">
+                </div>
+            </div>
+            <div class="mental-health-stats">
+                <div class="stat-item">
+                    <div class="stat-number">50+</div>
+                    <div class="stat-label">Workshops Conducted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">1000+</div>
+                    <div class="stat-label">Lives Impacted</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">15+</div>
+                    <div class="stat-label">Partner Organizations</div>
+                </div>
+                <div class="stat-item">
+                    <div class="stat-number">5</div>
+                    <div class="stat-label">Years of Advocacy</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials" id="testimonials">
+        <div class="container">
+            <h2 class="section-title">Testimonials</h2>
+            <div class="testimonials-slider">
+                <div class="testimonial">
+                    <p class="testimonial-text">"Mercirick's unique blend of creative vision and mental health advocacy creates transformative experiences. Her workshops helped our team develop not just creative skills but also emotional resilience."</p>
+                    <div class="testimonial-author">
+                        <img src="https://picsum.photos/seed/person1/80/80.jpg" alt="Sarah Johnson" class="author-img">
+                        <div class="author-info">
+                            <h4 class="author-name">Sarah Johnson</h4>
+                            <p class="author-title">CEO, Creative Agency</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="slider-dots">
+                <span class="dot active"></span>
+                <span class="dot"></span>
+                <span class="dot"></span>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    {% comment %} <section class="contact" id="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <h3 class="contact-heading">Let's Create Something Meaningful Together</h3>
+                    <p class="contact-description">Whether you're looking for creative direction, mental health advocacy collaboration, or just want to connect, I'd love to hear from you.</p>
+                    <div class="contact-details">
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text">hello@mercirick.com</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-phone"></i>
+                            </div>
+                            <div class="contact-text">+1 (555) 123-4567</div>
+                        </div>
+                        <div class="contact-item">
+                            <div class="contact-icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text">New York, NY</div>
+                        </div>
+                    </div>
+                    <div class="social-links">
+                        <a href="#" class="social-link"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                        <a href="#" class="social-link"><i class="fab fa-behance"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Your Email</label>
+                            <input type="email" id="email" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" class="form-control" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" class="form-control" required></textarea>
+                        </div>
+                        <button type="submit" class="form-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section> {% endcomment %}
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p class="footer-text">&copy; 2023 Mercirick. All Rights Reserved. Designed with Purpose</p>
+        </div>
+    </footer>
+
+    <script src="{% static 'js/home.js' %}"></script>
+</body>
+</html>
